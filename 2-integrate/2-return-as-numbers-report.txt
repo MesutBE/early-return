@@ -1,0 +1,25 @@
+ [...] /2-integrate/2-return-as-numbers.js -- Sat Mar 07 2020
+
++ PASS: 0
+- FAIL: 7
+x ERROR: 0
+
+- Test 1 (FAIL): undefined deepStrictEqual [ 1, 2 ]
+
+
+- Test 2 (FAIL): undefined deepStrictEqual [ 1, 10 ]
+
+
+- Test 3 (FAIL): undefined deepStrictEqual [ 2, 0 ]
+
+
+- Test 4 (FAIL): undefined deepStrictEqual null
+
+
+- Test 5 (FAIL): undefined deepStrictEqual null
+
+
+- Test 6 (FAIL): undefined deepStrictEqual [ 1, 3, 5 ]
+
+
+- Test 7 (FAIL): undefined deepStrictEqual [ 2, 4, 6 ]
