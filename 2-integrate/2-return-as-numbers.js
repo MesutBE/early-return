@@ -19,8 +19,17 @@ const returnAsNumbersTests = [
 ];
 
 const returnAsNumbers = (arr) => {
+  if (arr.every(x => typeof x === 'number')) { return null }
+  if (arr.includes(NaN)) { return null }
+
+  return arr.map(x => {
+    if (x === '') {
+      return '0';
+    } else { return x }
+  }).filter(x => !isNaN(x)).map(x => Number(x));
   // cast all non-NaNy strings to numbers and return the new array
   // Hint: early return condition --> array contains any non-strings
 };
 
 evaluate(returnAsNumbers, returnAsNumbersTests);
+
