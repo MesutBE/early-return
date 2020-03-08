@@ -20,7 +20,13 @@ const findAllEvensTests = [
 ];
 
 const findAllEvens = (arr) => {
-  // write me!
+  if (!arr.every(x => typeof x == 'string')){return null;}
+
+  return arr.filter(x => !isNaN(x)).filter(x => {
+    if(Number(x)%2 == 0){
+      return true;
+    } else {return false;}
+  });
 };
 
 evaluate(findAllEvens, findAllEvensTests);
