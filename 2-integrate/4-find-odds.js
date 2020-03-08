@@ -19,7 +19,13 @@ const findAllOddsTests = [
 ];
 
 const findAllOdds = (arr) => {
-  // write me!
+  if (!arr.every(x => typeof x == 'string')) { return null; }
+
+  return arr.filter(x => !isNaN(x)).filter(x => {
+    if (Number(x) % 2 == 0) {
+      return false;
+    } else { return true; }
+  });
 };
 
 evaluate(findAllOdds, findAllOddsTests);
