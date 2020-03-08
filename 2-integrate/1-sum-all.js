@@ -21,9 +21,9 @@ const sumAllTests = [
 ];
 
 const sumAll = (arr) => {
-  // write me!
+  if (arr.some(x => isNaN(x)) || arr.some(x => typeof x === 'string')){return null}
+  return arr.reduce((a,b) => a+b);
   // Hint: early return - are there any non-numbers?
-  arr.forEach(e => console.log(e))
 };
 
 evaluate(sumAll, sumAllTests);
