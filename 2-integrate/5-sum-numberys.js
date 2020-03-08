@@ -20,7 +20,9 @@ const sumAllNumberysTests = [
 ];
 
 const sumAllNumberys = (arr) => {
-  // write me!
+  if (!arr.every(x => typeof x == 'string')) { return null; }
+
+  return arr.filter(x => !isNaN(x)).reduce((a, b) => Number(a) + Number(b));;
 };
 
 evaluate(sumAllNumberys, sumAllNumberysTests);
